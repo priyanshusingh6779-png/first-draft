@@ -6,7 +6,7 @@ body{
     justify-content:center;
     align-items: center;
     min-height: 100vh;
-    background-image: url("image.jpg");
+    background-image: url("./assets/images/work2.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -76,6 +76,9 @@ body{
     font-size: 15px;
     text-align: center;
     margin: 20px 0 15px;
+}
+a{
+    text-decoration:none;
 }
 .register-link p a{
     color:white;
