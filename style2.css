@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #0f1115, #0b0d12);
+    color: white;
+    min-height: 100vh;
+}
+
+/* ---------------- HEADER ---------------- */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.header h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.header p {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ---------------- MAIN DASHBOARD ---------------- */
+.dashboard {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 24px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+}
+
+/* ---------------- PERFORMANCE ---------------- */
+.performance {
+    background: rgba(255,255,255,0.04);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Circle */
+.circle {
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    border-radius: 50%;
+    background: conic-gradient(#4a6cf7 72%, #2a2d36 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.circle::before {
+    content: "";
+    width: 105px;
+    height: 105px;
+    background: #0f1115;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle span,
+.circle p {
+    position: relative;
+    z-index: 1;
+}
+
+.circle span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.circle p {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Line progress */
+.line-progress {
+    margin: 25px auto 10px;
+    width: 70%;
+    height: 8px;
+    background: #2a2d36;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.line-fill {
+    width: 72%;
+    height: 100%;
+    background: linear-gradient(90deg, #4a6cf7, #6a8cff);
+}
+
+.week-label {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* ---------------- CARDS ---------------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* Card */
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 30px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 13px;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
