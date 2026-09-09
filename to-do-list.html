@@ -2,65 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List | Habit Tracker</title>
+    <title>To-Do List</title>
+
     <link rel="stylesheet" href="list-style.css">
+    <script src="storage.js" defer></script>
+    <script src="to-do-list.js" defer></script>
 </head>
 <body>
-
-    <!-- HEADER -->
     <header class="header">
-        <h1>To-Do List</h1>
-        <p>Small tasks. Big consistency.</p>
+        <h1> To-Do List</h1>
+        <p>Track tasks and earn points daily</p>
+        <div class="score-card" id="scoreCard">
+            <h2>Today's Score</h2>
+            <div id="dailyScore">0</div>
+        </div>
     </header>
-
-    <!-- TODO CONTAINER -->
     <main class="todo-container">
+        <div class="input-group">
+            <input 
+                type="text" 
+                id="taskName" 
+                placeholder="Enter task name"
+            >
 
-        <!-- ADD TASK -->
-        <section class="add-task">
-            <input type="text" placeholder="Add a new task...">
-            <button>Add</button>
-        </section>
+            <input 
+                type="number" 
+                id="taskPoints" 
+                placeholder="+ / - Points"
+            >
 
-        <!-- TASK LIST -->
+            <button id="addTaskBtn">Add Task</button>
+        </div>
         <section class="task-list">
-
-            <div class="task completed">
-                <label>
-                    <input type="checkbox" checked>
-                    <span>Morning workout</span>
-                </label>
-                <small>Done</small>
+            <div id="taskList">
+                
             </div>
-
-            <div class="task">
-                <label>
-                    <input type="checkbox">
-                    <span>Study DBMS normalization</span>
-                </label>
-                <small>Pending</small>
-            </div>
-
-            <div class="task">
-                <label>
-                    <input type="checkbox">
-                    <span>Revise DSA concepts</span>
-                </label>
-                <small>Pending</small>
-            </div>
-
-            <div class="task">
-                <label>
-                    <input type="checkbox">
-                    <span>Read for 30 minutes</span>
-                </label>
-                <small>Pending</small>
-            </div>
-
+            <input type="checkbox" id="checkBox">
         </section>
 
     </main>
-
 </body>
 </html>

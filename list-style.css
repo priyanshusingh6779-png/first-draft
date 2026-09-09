@@ -11,11 +11,54 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER */
 .header {
     text-align: center;
     padding: 40px 20px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+#taskList div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #020617;
+    border: 1px solid #1e293b;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    margin-top:50px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background: #020617;
+    color: #e5e7eb;
+}
+
+.input-group input::placeholder {
+    color: #64748b;
+}
+
+.input-group button {
+    margin-top: 20px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #38bdf8;
+    color: #020617;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    opacity: 0.9;
 }
 
 .header h1 {
@@ -23,13 +66,35 @@ body {
     font-weight: 700;
 }
 
+.score-card {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 14px;
+    text-align: center;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.score-card h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.score-card div {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+.negative {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+
 .header p {
     margin-top: 6px;
     font-size: 14px;
     opacity: 0.7;
 }
 
-/* TODO CONTAINER */
 .todo-container {
     max-width: 600px;
     margin: 40px auto;
@@ -39,7 +104,6 @@ body {
     box-shadow: 0 30px 70px rgba(0,0,0,0.6);
 }
 
-/* ADD TASK */
 .add-task {
     display: flex;
     gap: 12px;
@@ -77,14 +141,12 @@ body {
     box-shadow: 0 12px 30px rgba(74,108,247,0.5);
 }
 
-/* TASK LIST */
 .task-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* TASK */
 .task {
     display: flex;
     justify-content: space-between;
@@ -117,13 +179,11 @@ body {
     font-size: 15px;
 }
 
-/* STATUS */
 .task small {
     font-size: 12px;
     opacity: 0.7;
 }
 
-/* COMPLETED TASK */
 .task.completed {
     background: rgba(46,204,113,0.15);
 }

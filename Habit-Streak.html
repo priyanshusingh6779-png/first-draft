@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Habit Streak</title>
+
+    <link rel="stylesheet" href="habit-streak.css">
+
+    <script src="storage.js" defer></script>
+    <script src="habit.js" defer></script>
+    <script src="js/habits.js" defer></script>
+</head>
+<body>
+
+<main class="container">
+
+    <h1>Habits</h1>
+    <p class="subtitle">Build consistency, maintain streaks</p>
+
+    <section class="streak-card">
+        <h2>Current Streak</h2>
+        <div class="streak-count" id="streakCount">0 Days</div>
+    </section>
+
+    <div class="input-group">
+        <input 
+            type="text" 
+            id="habitName" 
+            placeholder="Habit name"
+        >
+        <input 
+            type="number" 
+            id="habitPoints" 
+            placeholder="+ / - Points"
+        >
+        <button id="addHabitBtn">Add Habit</button>
+    </div>
+
+    <section class="habits">
+        <h2>Today's Habits</h2>
+
+        <div id="habitList">
+        </div>
+    </section>
+
+    <section class="score-card" id="scoreCard">
+        <h2>Today's Score</h2>
+        <div id="dailyScore">0</div>
+    </section>
+
+    <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+
+</main>
+
+</body>
+</html>

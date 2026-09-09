@@ -1,0 +1,248 @@
+/* ── Design Tokens ── */
+:root {
+  --bg: #0d0f1a;
+  --bg-card: #161929;
+  --bg-card2: #1e2238;
+  --accent: #7c6af7;
+  --accent2: #f76a6a;
+  --accent3: #6af7c4;
+  --text: #e8eaf6;
+  --text-muted: #8a8fad;
+  --border: rgba(124, 106, 247, 0.2);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --transition: 0.2s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 999px; }
+
+/* ── Layout ── */
+.page { min-height: 100vh; padding: 2rem 1rem; max-width: 900px; margin: 0 auto; }
+.page-title {
+  font-size: 2rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 0.4rem;
+}
+.page-subtitle { color: var(--text-muted); margin-bottom: 2rem; }
+
+/* ── Cards ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+/* ── Inputs ── */
+input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: inherit;
+  padding: 0.75rem 1rem;
+  outline: none;
+  width: 100%;
+  transition: border-color var(--transition);
+}
+input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124,106,247,0.15); }
+
+/* ── Buttons ── */
+.btn {
+  background: linear-gradient(135deg, var(--accent), #9b7aff);
+  border: none; border-radius: var(--radius-sm);
+  color: #fff; cursor: pointer;
+  font-family: inherit; font-size: 0.95rem; font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: opacity var(--transition), transform var(--transition);
+}
+.btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-danger {
+  background: linear-gradient(135deg, var(--accent2), #ff9e9e);
+}
+.btn-sm { padding: 0.45rem 0.9rem; font-size: 0.82rem; }
+.btn-ghost {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.btn-ghost:hover { border-color: var(--accent); color: var(--text); }
+
+/* ── Input Row ── */
+.input-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.input-row input { flex: 1; min-width: 140px; }
+
+/* ── Score Badge ── */
+.score-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  border-radius: 999px;
+  font-size: 1.4rem; font-weight: 800;
+  padding: 0.3rem 1.2rem;
+  color: #fff;
+}
+.score-badge.negative { background: linear-gradient(135deg, var(--accent2), #ff6b6b); }
+
+/* ── Streak Badge ── */
+.streak-num {
+  font-size: 3rem; font-weight: 800;
+  background: linear-gradient(135deg, #ffd93d, #ff6b6b);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* ── List Items ── */
+.list-item {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 0.6rem;
+  transition: border-color var(--transition);
+}
+.list-item:hover { border-color: var(--accent); }
+.list-item .name { flex: 1; font-weight: 500; }
+.list-item .pts {
+  font-weight: 700; font-size: 0.9rem;
+  color: var(--accent3);
+}
+.list-item .pts.neg { color: var(--accent2); }
+.list-item.completed .name { text-decoration: line-through; color: var(--text-muted); }
+
+/* ── Auth Page ── */
+.auth-wrap {
+  min-height: 100vh; display: flex;
+  align-items: center; justify-content: center;
+}
+.auth-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  width: 100%; max-width: 420px;
+  box-shadow: var(--shadow);
+}
+.auth-card h1 {
+  font-size: 1.8rem; font-weight: 800; margin-bottom: 0.3rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.auth-card p { color: var(--text-muted); margin-bottom: 1.8rem; }
+.auth-card .form-group { margin-bottom: 1rem; }
+.auth-card label { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.35rem; display: block; }
+.auth-card .btn { width: 100%; margin-top: 0.8rem; }
+.auth-switch { text-align: center; margin-top: 1.2rem; color: var(--text-muted); font-size: 0.9rem; }
+.auth-switch span { color: var(--accent); cursor: pointer; font-weight: 600; }
+.auth-switch span:hover { text-decoration: underline; }
+.error-msg { color: var(--accent2); font-size: 0.85rem; margin-top: 0.5rem; }
+
+/* ── Navbar ── */
+.navbar {
+  background: rgba(22, 25, 41, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+  padding: 0 1.5rem;
+  display: flex; align-items: center; gap: 0.3rem;
+  height: 62px;
+}
+.navbar .brand {
+  font-size: 1.1rem; font-weight: 800; margin-right: auto;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+.nav-link {
+  color: var(--text-muted); text-decoration: none;
+  padding: 0.45rem 0.85rem; border-radius: var(--radius-sm);
+  font-size: 0.88rem; font-weight: 500;
+  transition: background var(--transition), color var(--transition);
+}
+.nav-link:hover, .nav-link.active { background: var(--bg-card2); color: var(--text); }
+.nav-logout {
+  background: none; border: none; cursor: pointer;
+  color: var(--accent2); font-family: inherit; font-size: 0.88rem;
+  font-weight: 500; padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+.nav-logout:hover { background: rgba(247,106,106,0.1); }
+
+/* ── Dashboard Grid ── */
+.dash-grid {
+  display: grid; gap: 1.2rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin-top: 2rem;
+}
+.dash-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-decoration: none; color: var(--text);
+  display: block;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.dash-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: var(--shadow); }
+.dash-card .icon { font-size: 2rem; margin-bottom: 0.8rem; }
+.dash-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+.dash-card p { color: var(--text-muted); font-size: 0.85rem; }
+
+/* ── Progress Chart ── */
+.chart-wrap {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem; margin-top: 1.5rem;
+}
+.chart-wrap h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.2rem; }
+
+/* ── Insight Card ── */
+.insight-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 2rem; text-align: center;
+  margin-top: 1.5rem;
+}
+.insight-card .score { font-size: 3.5rem; font-weight: 800; }
+.insight-card .msg {
+  font-size: 1.1rem; color: var(--text-muted);
+  margin-top: 1rem; line-height: 1.7;
+}
+.insight-card.great .score {
+  background: linear-gradient(135deg, #6af7c4, var(--accent));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.insight-card.moderate .score {
+  background: linear-gradient(135deg, #ffd93d, #ffaa6a);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.insight-card.poor .score { color: var(--accent2); }
+
+/* ── Loading / Empty ── */
+.loading { text-align: center; color: var(--text-muted); padding: 3rem; }
+.empty { text-align: center; color: var(--text-muted); padding: 2rem; font-size: 0.95rem; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .page-title { font-size: 1.5rem; }
+  .navbar { padding: 0 0.75rem; }
+  .nav-link { padding: 0.4rem 0.5rem; font-size: 0.8rem; }
+}

@@ -6,17 +6,16 @@
 }
 
 body {
-    background: linear-gradient(180deg, #0f1115, #0b0d12);
-    color: white;
+    background: linear-gradient(180deg, #0bb8e8, #0eeabe);
+    color: rgb(11, 233, 211);
     min-height: 100vh;
 }
 
-/* ---------------- HEADER ---------------- */
 .header {
     text-align: center;
     padding: 40px 20px;
-    background: rgba(255,255,255,0.03);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: #005461;
+    border-bottom: 1px solid #005461;
 }
 
 .header h1 {
@@ -27,39 +26,37 @@ body {
 .header p {
     margin-top: 6px;
     font-size: 14px;
-    opacity: 0.7;
+    opacity: 1;
 }
 
-/* ---------------- MAIN DASHBOARD ---------------- */
 .dashboard {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 30px;
-    background: rgba(255,255,255,0.02);
+    background: #0C7779;
     border-radius: 24px;
     box-shadow: 0 30px 70px rgba(0,0,0,0.6);
 }
 
-/* ---------------- PERFORMANCE ---------------- */
 .performance {
-    background: rgba(255,255,255,0.04);
+    background: #249E94;
     border-radius: 20px;
     padding: 30px;
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* Circle */
 .circle {
     width: 140px;
     height: 140px;
     margin: auto;
     border-radius: 50%;
-    background: conic-gradient(#4a6cf7 72%, #2a2d36 0);
+    background: conic-gradient(#07eed7 72%, #e4e8d9 0);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    color:white;
 }
 
 .circle::before {
@@ -87,10 +84,11 @@ body {
     opacity: 0.7;
 }
 
-/* Line progress */
+
 .line-progress {
     margin: 25px auto 10px;
     width: 70%;
+    color:white;
     height: 8px;
     background: #2a2d36;
     border-radius: 10px;
@@ -100,24 +98,23 @@ body {
 .line-fill {
     width: 72%;
     height: 100%;
-    background: linear-gradient(90deg, #4a6cf7, #6a8cff);
+    background: linear-gradient(90deg, #42d8e3);
 }
 
 .week-label {
     font-size: 13px;
     opacity: 0.6;
+    color:white;
 }
 
-/* ---------------- CARDS ---------------- */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
 }
 
-/* Card */
 .card {
-    background: rgba(255,255,255,0.05);
+    background: #3BC1A8;
     border-radius: 20px;
     padding: 30px;
     text-decoration: none;
@@ -141,7 +138,6 @@ body {
     opacity: 0.7;
 }
 
-/* ---------------- FOOTER ---------------- */
 .footer {
     text-align: center;
     padding: 20px;

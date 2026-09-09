@@ -90,3 +90,69 @@ h1 {
     text-decoration: none;
     color: #38bdf8;
 }
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background: #020617;
+    color: #e5e7eb;
+}
+
+.input-group input::placeholder {
+    color: #64748b;
+}
+
+.input-group button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #38bdf8;
+    color: #020617;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    opacity: 0.9;
+}
+
+#taskList div,
+#habitList div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background: #020617;
+    border: 1px solid #1e293b;
+}
+
+.score-card {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 14px;
+    text-align: center;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.score-card h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.score-card div {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+.negative {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+

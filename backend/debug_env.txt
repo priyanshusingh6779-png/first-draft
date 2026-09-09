@@ -1,0 +1,3 @@
+GEMINI_API_KEY loaded: Yes
+GEMINI_API_KEY starts with: AIza...
+GEMINI_API_KEY is placeholder: False
